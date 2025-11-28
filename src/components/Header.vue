@@ -79,6 +79,7 @@ const closeMenu = () => {
 
         .icon {
             font-size: 3rem;
+            cursor: pointer;
         }
 
         .search-icon {
@@ -100,8 +101,6 @@ const closeMenu = () => {
             .nav-list {
                 display: flex;
                 flex-direction: column;
-
-
             }
         }
     }
@@ -139,9 +138,10 @@ const closeMenu = () => {
                         height: 0.2rem;
                         width: 100%;
                         background: linear-gradient(90deg,
-                                transparent 0%,
-                                $secondary-color 50%,
-                                transparent 100%);
+                            transparent 0%,
+                            $secondary-color 50%,
+                            transparent 100%
+                        );
 
                         border-radius: 1rem;
                         transform: scaleX(0);
