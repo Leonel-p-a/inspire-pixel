@@ -60,6 +60,8 @@ const closeMenu = () => {
 
     height: 100px;
 
+    font-family: vars.$primary-font;
+
     .logo {
         width: 57px;
         height: fit-content;
