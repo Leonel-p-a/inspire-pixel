@@ -51,6 +51,8 @@ const closeMenu = () => {
 </template>
 
 <style scoped lang="scss">
+@use "@/styles/_variables.scss" as vars;
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -70,7 +72,7 @@ const closeMenu = () => {
         gap: 5rem;
 
         a {
-            color: $tertiary-color;
+            color: vars.$tertiary-color;
         }
 
         .menu {
@@ -83,7 +85,7 @@ const closeMenu = () => {
         }
 
         .search-icon {
-            color: $tertiary-color;
+            color: vars.$tertiary-color;
         }
 
         .nav-content {
@@ -95,7 +97,7 @@ const closeMenu = () => {
             }
 
             .user-icon {
-                color: $secondary-color;
+                color: vars.$secondary-color;
             }
 
             .nav-list {
@@ -139,7 +141,7 @@ const closeMenu = () => {
                         width: 100%;
                         background: linear-gradient(90deg,
                             transparent 0%,
-                            $secondary-color 50%,
+                            vars.$secondary-color 50%,
                             transparent 100%
                         );
 
