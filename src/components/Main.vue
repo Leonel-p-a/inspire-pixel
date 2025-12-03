@@ -24,12 +24,15 @@ import Card from './Card.vue';
 </template>
 
 <style scoped lang="scss">
+@use '@/styles/variables.scss' as vars;
+
 .cards-container {
     
     h2 {
         font-size: 3rem;
         font-weight: 400;
         margin-bottom: 25px;
+        font-family: vars.$primary-font;
     }
 
     .cards-grid {
