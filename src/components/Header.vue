@@ -78,13 +78,14 @@ const closeMenu = () => {
     .navbar {
         display: flex;
         align-items: center;
-        gap: 5rem;
+        gap: 2.5rem;
 
         a {
             color: vars.$tertiary-color;
         }
 
         .menu {
+            width: 4rem;
             cursor: pointer;
         }
 
@@ -232,6 +233,14 @@ const closeMenu = () => {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media (max-width: 200px) {
+    .header {
+        .navbar {
+            gap: 0;
+        }
     }
 }
 

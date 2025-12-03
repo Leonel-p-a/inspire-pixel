@@ -5,7 +5,7 @@ import Photographer from '../assets/photographer.png'
 <template>
     <section class="hero-container">
         <div class="hero-image">
-            <img :src="Photographer" alt="">
+            <img :src="Photographer" alt="Imagem de uma fotógrafa">
         </div>
 
         <div class="hero-content">
