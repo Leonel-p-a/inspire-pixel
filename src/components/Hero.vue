@@ -63,7 +63,7 @@ import Photographer from '../assets/photographer.png'
         }
 
         p {
-            font-size: clamp(0.9rem, 4vw, 1.1rem);
+            font-size: clamp(1.4rem, 4vw, 1.6rem);
             margin-top: 1rem;
             margin-left: auto;
             margin-right: auto;
