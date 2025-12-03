@@ -38,5 +38,9 @@ import { Icon } from '@iconify/vue';
         border-radius: 10px;
         cursor: pointer;
     }
+
+    &:hover {
+        filter: brightness(0.9);
+    }
 }
 </style>
