@@ -7,7 +7,7 @@ const errorMessage = ref(null);
 
 async function fetchData() {
     try {
-        const response = await fetch('https://picsum.photos/v2/list');
+        const response = await fetch('https://picsum.photos/v2/list?page=3&limit=40');
 
         if (!response.ok) {
             throw {
