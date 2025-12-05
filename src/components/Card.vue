@@ -1,11 +1,22 @@
 <script setup>
-defineProps(['img']);
+import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
+
+defineProps(['img']);
+
+const favorite = ref(false);
+
+const handleHeartColor = () => {
+    favorite.value = !favorite.value;
+}
 </script>
 
 <template>
     <div class="card">
-        <Icon icon="material-symbols:favorite" class="favorite-icon" />
+        <button @click="handleHeartColor">            
+            <Icon v-if="favorite" icon="material-symbols:favorite" class="favorite-icon favorite" />
+            <Icon v-else icon="material-symbols:favorite" class="favorite-icon" />
+        </button>
         <img class="image" :src="img" alt="">
     </div>
 </template>
@@ -26,6 +37,10 @@ import { Icon } from '@iconify/vue';
         color: vars.$primary-color;
         cursor: pointer;
         z-index: 2;
+    }
+
+    .favorite {
+        color: #ff0000;
     }
 
     .image {
