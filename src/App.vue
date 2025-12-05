@@ -1,8 +1,8 @@
 <script setup>
-import Footer from './components/Footer.vue';
-import Header from './components/Header.vue';
-import Hero from './components/Hero.vue';
-import Main from './components/Main.vue';
+import Footer from './components/layouts/Footer.vue';
+import Header from './components/layouts/Header.vue';
+import Hero from './components/layouts/Hero.vue';
+import Main from './components/layouts/Main.vue';
 </script>
 
 <template>

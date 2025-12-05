@@ -1,5 +1,5 @@
 <script setup>
-import Photographer from '../assets/photographer.png'
+import Photographer from '../../assets/images/photographer.png'
 </script>
 
 <template>
@@ -20,7 +20,7 @@ import Photographer from '../assets/photographer.png'
 </template>
 
 <style scoped lang="scss">
-@use "@/styles/_variables.scss" as vars;
+@use "@/assets/styles/_variables.scss" as vars;
 
 .hero-container {
     display: flex;

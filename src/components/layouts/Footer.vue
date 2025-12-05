@@ -1,8 +1,8 @@
 <script setup>
-import Facebook from '../assets/Facebook.svg';
-import Linkedin from '../assets/Linkedin.svg';
-import Instagram from '../assets/Instagram.svg';
-import Twitter from '../assets/Twitter.svg';
+import Facebook from '../../assets/icons/Facebook.svg';
+import Linkedin from '../../assets/icons/Linkedin.svg';
+import Instagram from '../../assets/icons/Instagram.svg';
+import Twitter from '../../assets/icons/Twitter.svg';
 </script>
 
 <template>
@@ -39,7 +39,7 @@ import Twitter from '../assets/Twitter.svg';
 </template>
 
 <style scoped lang="scss">
-@use '@/styles/variables.scss' as vars;
+@use "@/assets/styles/_variables.scss" as vars;
 
 .footer {
     display: flex;

@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import Card from './Card.vue';
-import { fetchPhotos } from '../util/service/photos';
+import Card from '../ui/Card.vue';
+import { fetchPhotos } from '../../services/photos';
 
 const photos = ref([]);
 const errorMessage = ref(null);
@@ -27,7 +27,7 @@ onMounted(async () => {
 </template>
 
 <style scoped lang="scss">
-@use '@/styles/variables.scss' as vars;
+@use "@/assets/styles/_variables.scss" as vars;
 
 .cards-container {
 

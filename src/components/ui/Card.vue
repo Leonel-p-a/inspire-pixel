@@ -22,7 +22,7 @@ const handleHeartColor = () => {
 </template>
 
 <style scoped lang="scss">
-@use "@/styles/_variables.scss" as vars;
+@use "@/assets/styles/_variables.scss" as vars;
 
 .card {
     position: relative;

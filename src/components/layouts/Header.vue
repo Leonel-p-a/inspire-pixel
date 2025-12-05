@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from "vue";
 import { Icon } from '@iconify/vue';
-import Logo from '../assets/logo.png';
-import Menu from '../assets/icon-menu-mobile.png';
+import Logo from '../../assets/images/logo.png';
+import Menu from '../../assets/icons/icon-menu-mobile.png';
 
 const isMenuOpen = ref(false);
 
@@ -58,7 +58,7 @@ const closeMenu = () => {
 </template>
 
 <style scoped lang="scss">
-@use "@/styles/_variables.scss" as vars;
+@use "@/assets/styles/_variables.scss" as vars;
 
 .header {
     display: flex;
