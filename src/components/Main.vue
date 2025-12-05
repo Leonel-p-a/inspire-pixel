@@ -1,30 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import Card from './Card.vue';
+import { fetchPhotos } from '../util/service/photos';
 
 const photos = ref([]);
 const errorMessage = ref(null);
 
-async function fetchData() {
-    try {
-        const response = await fetch('https://picsum.photos/v2/list?page=3&limit=40');
-
-        if (!response.ok) {
-            throw {
-                status: response.status,
-                message: response.statusText || "Erro desconhecido"
-            };
-        }
-
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        errorMessage.value = `Erro ${error.status}: ${error.message}`;
-    }
-}
-
 onMounted(async () => {
-    photos.value = await fetchData();
+    photos.value = await fetchPhotos();
 });
 </script>
 
