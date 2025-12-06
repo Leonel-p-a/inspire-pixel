@@ -143,12 +143,11 @@ import Twitter from '../../assets/icons/Twitter.svg';
 
             .newsletter {
                 align-items: flex-start;
+            }
 
-                input {
-                    width: 400px;
-                    min-width: 200px;
-                    max-width: 100%;
-                }
+            .contact-about-container {
+                flex-direction: row;
+                gap: 5rem;
             }
         }
 
@@ -161,6 +160,20 @@ import Twitter from '../../assets/icons/Twitter.svg';
 
             img {
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        .footer-content {
+            .newsletter {
+                input {
+                    width: 400px;
+                    min-width: 200px;
+                    max-width: 100%;
+                }
             }
         }
     }
