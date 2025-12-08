@@ -31,13 +31,13 @@ const closeMenu = () => {
             <div class="nav-content" :class="{ 'nav-content--open': isMenuOpen }">
                 <ul class="nav-list">
                     <li>
-                        <a @click="closeMenu" href="#">Início</a>
+                        <RouterLink to="/">Home</RouterLink>
                     </li>
                     <li>
-                        <a @click="closeMenu" href="#">Galeria</a>
+                        <RouterLink to="/gallery">Galeria</RouterLink>
                     </li>
                     <li>
-                        <a @click="closeMenu" href="#">Favoritos</a>
+                        <RouterLink to="/favorites">Favoritos</RouterLink>
                     </li>
                 </ul>
                 <div class="">
