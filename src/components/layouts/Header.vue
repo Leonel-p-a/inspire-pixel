@@ -36,7 +36,7 @@ const closeMenu = () => {
                     <li @click="closeMenu">
                         <RouterLink to="/gallery">Galeria</RouterLink>
                     </li @click="closeMenu">
-                    <li>
+                    <li @click="closeMenu">
                         <RouterLink to="/favorites">Favoritos</RouterLink>
                     </li>
                 </ul>
