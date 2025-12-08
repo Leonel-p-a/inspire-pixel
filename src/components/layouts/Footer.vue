@@ -7,7 +7,7 @@ import Twitter from '../../assets/icons/Twitter.svg';
 
 <template>
     <footer class="footer">
-        <div class="footer-content">
+        <section class="footer-content">
             <div class="newsletter">
                 <h2>Assine nossa newsletter</h2>
                 <input type="text" placeholder="Seu e-mail">
@@ -27,14 +27,14 @@ import Twitter from '../../assets/icons/Twitter.svg';
                     <span>Blog</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="footer-social-network-icons">
+        <section class="footer-social-network-icons">
             <img :src="Facebook" alt="Logo do Facebook">
             <img :src="Linkedin" alt="Logo do Linkedin">
             <img :src="Instagram" alt="Logo do Instagram">
             <img :src="Twitter" alt="Logo do Twitter">
-        </div>
+        </section>
     </footer>
 </template>
 
