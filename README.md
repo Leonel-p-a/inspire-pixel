@@ -40,9 +40,9 @@ Inspire-Pixel/
 │
 ├── public/ # Arquivos públicos
 ├── src/ # Código fonte da aplicação
-│ ├── assets/ # Imagens e ícones
+│ ├── assets/ # Imagens, ícones e estilos
 │ ├── components/ # Componentes reutilizáveis Vue
-│ ├── styles/ # Estilos globais, variáveis e formatações (se estiver usando gestão de estado)
+│ ├── services/ # Seviços (requisição da API)
 │ ├── App.vue # Componente raiz da aplicação
 │ └── main.js (ou main.ts) # Ponto de entrada da aplicação
 │
