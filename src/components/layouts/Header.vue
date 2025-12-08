@@ -30,12 +30,12 @@ const closeMenu = () => {
 
             <div class="nav-content" :class="{ 'nav-content--open': isMenuOpen }">
                 <ul class="nav-list">
-                    <li>
+                    <li @click="closeMenu">
                         <RouterLink to="/">Home</RouterLink>
                     </li>
-                    <li>
+                    <li @click="closeMenu">
                         <RouterLink to="/gallery">Galeria</RouterLink>
-                    </li>
+                    </li @click="closeMenu">
                     <li>
                         <RouterLink to="/favorites">Favoritos</RouterLink>
                     </li>
