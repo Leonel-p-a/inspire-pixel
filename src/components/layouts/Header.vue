@@ -50,7 +50,6 @@ const closeMenu = () => {
                 </div>
                 <div>
                     <button type="button" @click="toggleTheme" aria-label="Alternar tema">
-                        <!-- usa o computed toggleIcon para trocar o svg -->
                         <img :src="toggleIcon" alt="Toggle theme" class="toggle-button">
                     </button>
                 </div>

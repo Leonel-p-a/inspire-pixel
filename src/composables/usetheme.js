@@ -4,15 +4,14 @@ import { ref, computed, watch, onMounted } from 'vue';
 const THEME_KEY = 'app_theme';
 const theme = ref('light');
 
+const ICON_TOGGLE_OFF = new URL('../assets/icons/mdi--toggle-switch-off-outline.svg', import.meta.url).href;
+const ICON_TOGGLE_ON  = new URL('../assets/icons/mdi--toggle-switch.svg', import.meta.url).href;
+
 export function useTheme() {
   const isDark = computed(() => theme.value === 'dark');
-
   const themeClass = computed(() => (isDark.value ? 'dark-mode' : 'light-mode'));
 
-  const toggleIcon = computed(() =>
-    theme.value === 'light'
-      ? '/src/assets/icons/mdi--toggle-switch-off-outline.svg'
-      : '/src/assets/icons/mdi--toggle-switch.svg'
+  const toggleIcon = computed(() => (isDark.value ? ICON_TOGGLE_ON : ICON_TOGGLE_OFF )
   );
 
   function toggleTheme() {
