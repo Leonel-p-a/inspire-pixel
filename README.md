@@ -25,6 +25,8 @@ O resultado já está disponível online via deploy: https://inspire-pixel-six.v
 ## Tecnologias utilizadas
 
 - Vue.js — framework JavaScript para construir a interface.  
+- Vue Router — ferramente nativa para configuração de rotas
+- Iconify — biblioteca de ícones
 - Vite — ferramenta de build / bundler, que oferece inicialização rápida durante o desenvolvimento.  
 - SCSS — estilização
 - HTML / CSS / JavaScript  
