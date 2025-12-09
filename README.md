@@ -42,6 +42,9 @@ Inspire-Pixel/
 ├── src/ # Código fonte da aplicação
 │ ├── assets/ # Imagens, ícones e estilos
 │ ├── components/ # Componentes reutilizáveis Vue
+│ ├── composables/ # Funções reutilizáveis (gerenciam estados reativos)
+│ ├── pages/ # Páginas da aplicação
+│ ├── router/ # Gerenciamento de rotas
 │ ├── services/ # Seviços (requisição da API)
 │ ├── App.vue # Componente raiz da aplicação
 │ └── main.js (ou main.ts) # Ponto de entrada da aplicação
