@@ -1,8 +1,11 @@
 <script setup>
 import { ref } from "vue";
+import { useTheme } from "../../composables/usetheme";
 import { Icon } from '@iconify/vue';
 import Logo from '../../assets/images/logo.png';
 import Menu from '../../assets/icons/icon-menu-mobile.png';
+
+const { toggleTheme, toggleIcon } = useTheme();
 
 const isMenuOpen = ref(false);
 
@@ -40,10 +43,16 @@ const closeMenu = () => {
                         <RouterLink to="/favorites">Favoritos</RouterLink>
                     </li>
                 </ul>
-                <div class="">
+                <div>
                     <a href="#">
                         <Icon @click="closeMenu" icon="material-symbols:person" class="icon user-icon" />
                     </a>
+                </div>
+                <div>
+                    <button type="button" @click="toggleTheme" aria-label="Alternar tema">
+                        <!-- usa o computed toggleIcon para trocar o svg -->
+                        <img :src="toggleIcon" alt="Toggle theme" class="toggle-button">
+                    </button>
                 </div>
                 <div class="close-button-container">
                     <button @click="closeMenu">
@@ -67,7 +76,19 @@ const closeMenu = () => {
 
     height: 100px;
 
+    background-color: vars.$primary-color;
     font-family: vars.$primary-font;
+
+    position: fixed;
+
+    top: 0%;
+    left: 50%;
+
+    transform: translate(-50%);
+
+    z-index: 1000;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     .logo {
         width: 57px;
@@ -125,6 +146,7 @@ const closeMenu = () => {
             &--open {
                 transform: translateX(0);
                 opacity: 1;
+                transition: background-color 0.3s ease, color 0.3s ease;
 
                 .nav-list {
                     li {
@@ -159,8 +181,12 @@ const closeMenu = () => {
                 color: vars.$secondary-color;
             }
 
+            .toggle-button {
+                width: 3rem;
+            }
+
             .close-icon {
-                color: vars.$secondary-color;
+                color: vars.$secondary-color !important;
 
                 position: absolute;
                 top: 0;
@@ -318,6 +344,36 @@ const closeMenu = () => {
                     display: none;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .dark-mode {
+        .navbar {
+            .nav-content {
+                background-color: #262626;
+            }
+        }
+
+    }
+
+}
+
+.dark-mode {
+    .header {
+        background-color: #262626;
+    }
+
+    .navbar {
+
+        a,
+        li {
+            color: #FFFFFF !important;
+        }
+
+        .search-icon {
+            color: #FFFFFF !important;
         }
     }
 }

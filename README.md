@@ -64,6 +64,7 @@ Inspire-Pixel/
 - Menu de navegação mobile
 - Opção funcional para favoritar imagens
 - Página de favoritos com vue-router
+- Temas claro e escuro
 
 ![Demonstração do Projeto](src/assets/demoFav.gif)
 

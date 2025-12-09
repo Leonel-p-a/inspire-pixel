@@ -55,6 +55,7 @@ import Twitter from '../../assets/icons/Twitter.svg';
 
         h2 {
             font-size: 1.8rem;
+            color: vars.$tertiary-color;
         }
 
         span {
@@ -178,4 +179,21 @@ import Twitter from '../../assets/icons/Twitter.svg';
         }
     }
 }
+
+.dark-mode {
+    .footer {
+        h2, span {
+            color: #FFFFFF;
+        }
+
+        input {
+            color: #FFFFFF;
+        }
+
+        .footer-social-network-icons {
+            display: none;
+        }
+    }
+}
+
 </style>
