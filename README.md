@@ -59,6 +59,8 @@ Inspire-Pixel/
 - Design moderno e responsivo
 - Botão de favorito funcional
 - Menu de navegação mobile
+- Opção funcional para favoritar imagens
+- Página de favoritos com vue-router
 
 ![Demonstração do Projeto](src/assets/demoFav.gif)
 
