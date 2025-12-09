@@ -5,7 +5,7 @@ defineProps(['photos']);
 </script>
 
 <template>
-        <transition-group
+    <transition-group
         name="fade"
         tag="div"
         class="cards-grid"
