@@ -1,23 +1,25 @@
 <script setup>
-import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
+import { useFavorites } from '../../composables/useFavorites';
 
-defineProps(['img']);
+const props = defineProps({ photo: Object });
 
-const favorite = ref(false);
+const { toggleFavorite, favorites } = useFavorites();
+
+const isFavorite = () => favorites.value.some(p => p.id === props.photo.id);
 
 const handleHeartColor = () => {
-    favorite.value = !favorite.value;
+    toggleFavorite(props.photo);
 }
 </script>
 
 <template>
     <div class="card">
         <button @click="handleHeartColor">            
-            <Icon v-if="favorite" icon="material-symbols:favorite" class="favorite-icon favorite" />
+            <Icon v-if="isFavorite()" icon="material-symbols:favorite" class="favorite-icon favorite" />
             <Icon v-else icon="material-symbols:favorite" class="favorite-icon" />
         </button>
-        <img class="image" :src="img" alt="">
+        <img class="image" :src="photo.download_url" alt="">
     </div>
 </template>
 
