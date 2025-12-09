@@ -1,4 +1,3 @@
-// src/composables/useTheme.js
 import { ref, computed, watch, onMounted } from 'vue';
 
 const THEME_KEY = 'app_theme';
