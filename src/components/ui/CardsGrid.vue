@@ -5,13 +5,17 @@ defineProps(['photos']);
 </script>
 
 <template>
-    <div class="cards-grid">
-        <Card 
+        <transition-group
+        name="fade"
+        tag="div"
+        class="cards-grid"
+    >
+        <Card
             v-for="photo in photos"
             :key="photo.id"
             :photo="photo"
         />
-    </div>
+    </transition-group>
 </template>
 
 <style scoped lang="scss">
@@ -22,6 +26,17 @@ defineProps(['photos']);
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
     justify-content: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all .4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 @media (min-width: 640px) {

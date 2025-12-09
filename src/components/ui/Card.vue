@@ -42,7 +42,7 @@ const handleHeartColor = () => {
     }
 
     .favorite {
-        color: #ff0000;
+        color: vars.$secondary-color;
     }
 
     .image {
